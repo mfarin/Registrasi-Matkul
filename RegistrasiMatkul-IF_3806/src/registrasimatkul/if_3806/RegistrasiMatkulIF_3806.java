@@ -98,4 +98,39 @@ public class Kelas {
 		numMatkul--;
 	}
 }
+public abstract class Orang {
+	private String nama;
+	
+	public Orang( String nama){
+		this.nama = nama;
+		
+	}
+	public void setNama(String nama){
+		this.nama = nama;
+		
+	}
+	public String getNama(){
+		return this.nama;
+		
+	}
+	
+}
+public class Dosen extends Orang{
+	private long nip;
+	
+	public class Dosen(long nip){
+		this.nip = nip;	
+		
+	}
+	public void setNip(long nip){
+		this.nip = nip;
+		
+	}
+	public long getNip(){
+		return this.nip;
+		
+	}
+	
+	
+}
 
