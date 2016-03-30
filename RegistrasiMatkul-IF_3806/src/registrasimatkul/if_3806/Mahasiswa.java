@@ -9,67 +9,63 @@ package registrasimatkul.if_3806;
  *
  * @author USER
  */
-public class Mahasiswa extends Orang {
-    private Kelas[] pilihan;
+import java.io.*;
+import java.util.*;
+
+public class Mahasiswa extends Orang implements Serializable{
+    private ArrayList<Kelas> pilihan = new ArrayList<Kelas>();
     private long Nim;
-    private int jumlKelas;
-	
-    public Mahasiswa(String Nama,long Nim,int totalKelas){
-	super(Nama);
-	this.Nim = Nim;
-	jumlKelas = totalKelas;
-	pilihan = new Kelas[totalKelas];
+    private String UsernameMhs;
+    private String PasswordMhs;
+
+    public Mahasiswa(long Nim, String UsernameMhs, String PasswordMhs, String nama) {
+        super(nama);
+        this.Nim = Nim;
+        this.UsernameMhs = UsernameMhs;
+        this.PasswordMhs = PasswordMhs;
     }
-	public void setNim(long Nim){
-		this.Nim = Nim;
-	}
-	
-	public long getNim(){
-		return Nim;
-	}
-	
-	public void setJumlahKelas(int x){
-		jumlKelas = x;
-	}
-	
-	public int getJumlahKelas(){
-		return jumlKelas;
-	}
-	
-	public void tambahKelas(Kelas k){
-		int x = 0;
-		do{
-			x++;
-		} while((x<getJumlahKelas())&&(pilihan[x] != null));
-		if (x<getJumlahKelas()){
-			pilihan[x] = k;
-		}
-		else{
-			System.out.println("Anda sudah tidak bisa memilih kelas lagi");
-		}
-	}
-	
-	public void kurangkelas(Kelas id){
-		int cari = 0;
-		do{
-			if (pilihan[cari]!=id){
-				cari++;
-			}
-		} while((cari<getJumlahKelas())&&(pilihan[cari]!=id));
-		if (cari<getJumlahKelas()){
-			pilihan[cari] = null;
-		}
-		else{
-			System.out.println("Kelas yang dicari tidak ada");
-		}
-	}
-	
-	public Kelas getKelas(int i){
-		if (pilihan[i]!=null){
-			return pilihan[i];
-		}
-		else{
-			return null;
-		}
-	}
+
+    public void setPilihan(ArrayList<Kelas> pilihan) {
+        this.pilihan = pilihan;
+    }
+
+    public void setNim(long Nim) {
+        this.Nim = Nim;
+    }
+
+    public void setUsernameMhs(String UsernameMhs) {
+        this.UsernameMhs = UsernameMhs;
+    }
+
+    public void setPasswordMhs(String PasswordMhs) {
+        this.PasswordMhs = PasswordMhs;
+    }
+
+    public ArrayList<Kelas> getPilihan() {
+        return pilihan;
+    }
+
+    public long getNim() {
+        return Nim;
+    }
+
+    public String getUsernameMhs() {
+        return UsernameMhs;
+    }
+
+    public String getPasswordMhs() {
+        return PasswordMhs;
+    }
+    
+    public void AddKelas(Kelas k){
+        pilihan.add(k);
+    }
+    
+    public void RemoveKelas(Kelas id){
+        for (int i = 0; i < pilihan.size(); i++) {
+            if (pilihan.get(i).equals(id) ) {
+                pilihan.remove(i);
+            }
+        }
+    }
 }
