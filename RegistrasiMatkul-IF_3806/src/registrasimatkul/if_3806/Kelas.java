@@ -10,73 +10,37 @@ package registrasimatkul.if_3806;
  * @author USER
  */
 public class Kelas {
-    private Matakuliah[] matakuliah = new Matakuliah[10];
-    private Dosen[] dosen = new Dosen[10];;
+    private Matakuliah matakuliah;
+    private Dosen dosen;
     private long idKelas;
-    private int numDosen;
-    private int numMatkul;
-	
-    public Kelas(long idKelas){
-	this.idKelas = idKelas;
+
+    public Kelas(Matakuliah matakuliah, Dosen dosen, long idKelas) {
+        this.matakuliah = matakuliah;
+        this.dosen = dosen;
+        this.idKelas = idKelas;
     }
-        
-    public void setDosen(Dosen d){
-	numDosen = 0;
-	do{
-            numDosen++;
-	} while((numDosen<10)&&(dosen[numDosen] != null));
-        if(numDosen<10){
-            dosen[numDosen]=d;
-	}
-        else{
-            System.out.println("Tidak dapat menambah dosen lagi!");
-        }
+
+    public void setMatakuliah(Matakuliah matakuliah) {
+        this.matakuliah = matakuliah;
     }
-	
-    public void addMatkul(Matakuliah matkul){
-	numMatkul = 0;
-	do{
-            numMatkul++;
-	} while((numMatkul<10)&&(matakuliah[numMatkul] != null));
-        if(numMatkul < 10){
-            this.matakuliah[numMatkul]=matkul;
-	}
-        else{
-            System.out.println("Tidak dapat menambah matakuliah lagi!");
-        }
+
+    public void setDosen(Dosen dosen) {
+        this.dosen = dosen;
     }
-	
-    public void setIdKelas(long idKelas){
-	this.idKelas=idKelas;
+
+    public void setIdKelas(long idKelas) {
+        this.idKelas = idKelas;
     }
-	
-    public long getIdKelas(){
-	return idKelas;
+
+    public Matakuliah getMatakuliah() {
+        return matakuliah;
     }
-	
-    public void deleteDosen(Dosen d){
-        numDosen = 0;
-        do{
-            numDosen++;
-        } while((numDosen<10) && (dosen[numDosen]!=d));
-        if(numDosen < 10){
-            dosen[numDosen]=null;	
-	}
-	else{
-            System.out.println("Dosen kosong");
-	}
+
+    public Dosen getDosen() {
+        return dosen;
     }
-	
-    public void deleteMatkul(Matakuliah matkul){
-        numMatkul = 0;
-        do{
-            numMatkul++;
-        } while((numMatkul<10) && (matakuliah[numMatkul]!=matkul));
-        if(numMatkul < 10){
-            this.matakuliah[numMatkul]=null;
-        }
-        else{
-            System.out.println("Matakuliah kosong");
-        }
+
+    public long getIdKelas() {
+        return idKelas;
     }
 }
