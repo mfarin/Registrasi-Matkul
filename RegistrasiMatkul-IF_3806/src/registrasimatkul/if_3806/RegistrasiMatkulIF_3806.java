@@ -10,5 +10,7 @@ package registrasimatkul.if_3806;
  * @author USER
  */
 public class RegistrasiMatkulIF_3806{
-    
+    public static void main(String args[]){
+        
+    }
 }
