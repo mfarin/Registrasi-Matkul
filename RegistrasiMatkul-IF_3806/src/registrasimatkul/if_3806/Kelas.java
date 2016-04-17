@@ -1,14 +1,21 @@
+package registrasimatkul.if_3806;
 public class Kelas {
     private Matakuliah matakuliah;
     private Dosen dosen;
-    private long idKelas;
+    private int idKelas;
+    //private String Nama;
 
-    public Kelas(Matakuliah matakuliah, Dosen dosen, long idKelas) {
+    public Kelas(Matakuliah matakuliah, Dosen dosen, int idKelas) {
         this.matakuliah = matakuliah;
         this.dosen = dosen;
         this.idKelas = idKelas;
+        //this.Nama = Nama;
     }
 
+    Kelas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     public void setMatakuliah(Matakuliah matakuliah) {
         this.matakuliah = matakuliah;
     }
@@ -17,10 +24,10 @@ public class Kelas {
         this.dosen = dosen;
     }
 
-    public void setIdKelas(long idKelas) {
+    public void setIdKelas(int idKelas) {
         this.idKelas = idKelas;
     }
-
+    
     public Matakuliah getMatakuliah() {
         return matakuliah;
     }
@@ -29,7 +36,7 @@ public class Kelas {
         return dosen;
     }
 
-    public long getIdKelas() {
+    public int getIdKelas() {
         return idKelas;
     }
 }

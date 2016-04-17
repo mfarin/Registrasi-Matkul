@@ -1,3 +1,4 @@
+package registrasimatkul.if_3806;
 public abstract class Orang {
     private String nama;
 

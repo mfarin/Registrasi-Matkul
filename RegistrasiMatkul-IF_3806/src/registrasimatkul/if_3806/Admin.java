@@ -1,3 +1,4 @@
+package registrasimatkul.if_3806;
 public class Admin extends Orang{
     private String UsernameAdm;
     private String PasswordAdm;

@@ -1,9 +1,10 @@
+package registrasimatkul.if_3806;
 public class Matakuliah {
     private String nama;
     private int sks;
-    private long kodeMatkul;
+    private int kodeMatkul;
 	
-    public Matakuliah(String nama, int sks, long kodeMatkul){
+    public Matakuliah(String nama, int sks, int kodeMatkul){
 	this.nama=nama;
 	this.sks=sks;
 	this.kodeMatkul=kodeMatkul;
@@ -25,11 +26,11 @@ public class Matakuliah {
 	return sks;
     }
 	
-    public void setKodeMatkul(long kodeMatkul){
+    public void setKodeMatkul(int kodeMatkul){
 	this.kodeMatkul=kodeMatkul;
     }
 	
-    public long getKodeMatkul(){
+    public int getKodeMatkul(){
 	return kodeMatkul;
     }
 }
