@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.Model.Kelas;
 import registrasimatkul.Model.Matakuliah;
@@ -30,14 +31,17 @@ public class Matakuliah4 implements ActionListener{
                         model.SaveKelas(k1);
                         //model.removeMatakuliah(mk);
                         model.addKelas(k1);
+                        JOptionPane.showMessageDialog(v, "Berhasil memasukkan Matakuliah");
                         v.reset();
                     }
                     else{
-                        System.out.println("Maaf Id Kelas yang diinputkan salah");
+                        //System.out.println("Maaf Id Kelas yang diinputkan salah");
+                        JOptionPane.showMessageDialog(v, "Maaf Id Kelas yang diinputkan salah");
                     }
                 }
                 else{
-                    System.out.println("Maaf Kode MK yang dimasukkan salah");
+                    //System.out.println("Maaf Kode MK yang dimasukkan salah");
+                    JOptionPane.showMessageDialog(v, "Maaf Kode MK yang dimasukkan salah");
                 }
             }catch(Exception se){
                 se.printStackTrace();

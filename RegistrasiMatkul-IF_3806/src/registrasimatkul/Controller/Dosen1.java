@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.Model.Dosen;
 import registrasimatkul.View.Admin.Dosen.MenuviewDosen_1;
@@ -24,6 +25,7 @@ public class Dosen1 implements ActionListener{
             Dosen d = new Dosen(v.getNamaDosen(), v.getNip());
             model.SaveDosen(d);
             model.addDosen(d);
+            JOptionPane.showMessageDialog(v, "Input Dosen Berhasil");
             v.reset();
         }
         else if (source.equals(v.getBtnPilih())){

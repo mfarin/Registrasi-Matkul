@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.Model.Kelas;
 import registrasimatkul.View.Admin.Dosen.MenuviewDosen_4;
@@ -27,6 +28,7 @@ public class Dosen4 implements ActionListener{
                         Kelas k = new Kelas(model.getKelas(v.gettfKode()).getMatakuliah(), model.getDosen(v.gettfNip()),v.gettfKode());
                         model.SaveKelas(k);
                         model.addKelas(k);
+                        JOptionPane.showMessageDialog(v, "Input Berhasil");
                         v.reset();
                     }
                 }

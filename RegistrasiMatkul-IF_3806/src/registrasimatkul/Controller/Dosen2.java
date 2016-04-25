@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.View.Admin.Dosen.MenuviewDosen_2;
 
@@ -23,6 +24,7 @@ public class Dosen2 implements ActionListener{
             try {
                 model.deleteDosen(v.getNip());
                 model.removeDosen_Array(v.getNip());
+                JOptionPane.showMessageDialog(v, "Delete Berhasil");
                 v.reset();
             } catch (Exception se) {
                 se.printStackTrace();

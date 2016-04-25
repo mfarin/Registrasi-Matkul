@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.View.Admin.Kelas.MenuviewKelas_1;
 
@@ -21,6 +22,7 @@ public class Kelas1 implements ActionListener{
         Object source = e.getSource();
         if(source.equals(v.getBtnSubmit())){
             model.addKelas_1(v.gettfKodeMk(), v.gettfNip(), v.gettfIdKelas());
+            JOptionPane.showMessageDialog(v, "Input Berhasil");
             v.reset();
         }
         else if(source.equals(v.getBtnPilih())){

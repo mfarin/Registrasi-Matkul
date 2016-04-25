@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.View.Admin.Matakuliah.MenuviewMatakuliah_5;
 
@@ -25,14 +26,17 @@ public class Matakuliah5 implements ActionListener{
                     if(model.getMatakuliah(v.gettfKodeMk())!=null){
                         model.deleteKelasD(v.gettfKodekelas(), v.gettfKodeMk());
                         model.deleteMatakuliah_Array2(v.gettfKodekelas(), v.gettfKodeMk());
+                        JOptionPane.showMessageDialog(v, "Berhasil delete Matakuliah");
                         v.reset();
                     }
                     else{
-                        System.out.println("Kode Matkul tidak cocok");
+                        //System.out.println("Kode Matkul tidak cocok");
+                        JOptionPane.showMessageDialog(v, "Kode Matkul tidak cocok");
                     }
                 }
                 else{
-                    System.out.println("Kode kelas tidak cocok");
+                    //System.out.println("Kode kelas tidak cocok");
+                    JOptionPane.showMessageDialog(v, "Kode kelas tidak cocok");
                 }
             } catch (Exception se) {
                 se.printStackTrace();

@@ -26,6 +26,7 @@ public class Dosen5 implements ActionListener{
                     if(model.getDosen(v.gettfNip())!=null){
                         model.deleteKelasDosen(v.gettfKodeKelas(), v.gettfNip());
                         model.removeDosen_Array2(v.gettfKodeKelas(), v.gettfNip());
+                        JOptionPane.showMessageDialog(v, "Delete Berhasil");
                         v.reset();
                     }
                     else{

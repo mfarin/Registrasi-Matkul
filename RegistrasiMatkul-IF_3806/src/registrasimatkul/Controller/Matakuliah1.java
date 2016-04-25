@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.Model.Matakuliah;
 import registrasimatkul.View.Admin.Matakuliah.MenuviewMatakuliah_1;
@@ -24,6 +25,7 @@ public class Matakuliah1 implements ActionListener{
             Matakuliah m = new Matakuliah(v.getMatakuliah(), v.getSks(), v.getKodeMK());
             model.SaveMatakuliah(m);
             model.addMatakuliah(m);
+            JOptionPane.showMessageDialog(v, "Input Matakuliah berhasil");
             v.reset();
         }
         else if(source.equals(v.getBtnPilih())){

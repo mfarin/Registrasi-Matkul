@@ -848,9 +848,9 @@ public class Aplikasi implements Serializable {
            //k = getKelas(p.getPilihan(i).getIdKelas());
            k = getKelas(p.getPilihan(i).getIdKelas());
            //p.setPilihan(k, i);
-           p.setPilihan(k1.get(i), i);
+           p.setPilihan(k, i);
            i++;
-       }while(i<p.LuasArray());
+       }while(i<k1.size());
        /*for(Kelas k2 : DaftarKelas){
            if(k2.getIdKelas()==rs.getInt("ID_KELAS")){
                do{

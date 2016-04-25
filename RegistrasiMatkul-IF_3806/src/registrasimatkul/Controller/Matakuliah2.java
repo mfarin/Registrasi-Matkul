@@ -2,6 +2,7 @@ package registrasimatkul.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import registrasimatkul.Console.Aplikasi;
 import registrasimatkul.View.Admin.Matakuliah.MenuviewMatakuliah_2;
 
@@ -24,6 +25,7 @@ public class Matakuliah2 implements ActionListener{
                 model.deleteMatakuliah(v.gettfKodeMatkul());
                 //model.removeMatakuliah(v.gettfKodeMatkul());
                 model.deleteMatakuliah_Array(v.gettfKodeMatkul());
+                JOptionPane.showMessageDialog(v, "Delete Berhasil");
                 v.reset();
             } catch (Exception se) {
                 se.printStackTrace();
